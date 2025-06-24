@@ -139,6 +139,11 @@ h6 {
   }
 }
 
+
+.logoooo{
+  height: 200px;
+}
+
 /*--------------------------------------------------------------
 # Global Header
 --------------------------------------------------------------*/
@@ -150,6 +155,15 @@ h6 {
   padding: 20px 0;
   transition: all 0.5s;
   z-index: 997;
+}
+
+.header .logo {
+  line-height: 1;
+}
+
+.header .logo img {
+  max-height: 32px;
+  margin-right: 8px;
 }
 
 .header .logo h1 {
@@ -222,8 +236,64 @@ h6 {
     background-color: var(--nav-hover-color);
   }
 
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 15px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
 
+  .navmenu .dropdown ul li {
+    min-width: 200px;
+    margin-left: 0;
+  }
 
+  .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    background-color: transparent;
+    color: var(--nav-hover-color);
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 105%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown .dropdown ul {
+    top: 0;
+    left: -90%;
+    visibility: hidden;
+  }
+
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: -100%;
+    visibility: visible;
+  }
+}
 
 /* Navmenu - Mobile */
 @media (max-width: 1199px) {
@@ -929,6 +999,55 @@ section,
 
 .call-to-action .cta-btn:hover {
   background: color-mix(in srgb, var(--accent-color) 90%, white 15%);
+}
+
+/*--------------------------------------------------------------
+# Services Section
+--------------------------------------------------------------*/
+.services .service-item {
+  background-color: var(--surface-color);
+  box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.1);
+  padding: 60px 30px 60px 70px;
+  transition: all ease-in-out 0.3s;
+  border-radius: 18px;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.services .service-item .icon {
+  position: absolute;
+  left: -20px;
+  top: calc(50% - 30px);
+}
+
+.services .service-item .icon i {
+  font-size: 64px;
+  line-height: 1;
+  transition: 0.5s;
+}
+
+.services .service-item h3 {
+  font-weight: 700;
+  margin: 10px 0 15px 0;
+  font-size: 22px;
+  transition: ease-in-out 0.3s;
+}
+
+.services .service-item p {
+  line-height: 24px;
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+@media (min-width: 1365px) {
+  .services .service-item:hover {
+    transform: translateY(-10px);
+  }
+
+  .services .service-item:hover h3 {
+    color: var(--accent-color);
+  }
 }
 
 /*--------------------------------------------------------------
@@ -1842,7 +1961,6 @@ section,
 .starter-section {
   /* Add your styles here */
 }
-
 /*--------------------------------------------------------------
 # Blog Posts Section
 --------------------------------------------------------------*/
@@ -1852,14 +1970,24 @@ section,
   padding: 30px;
   height: 100%;
   border-radius: 10px;
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
 }
 
 .blog-posts .post-img {
-  max-height: 240px;
-  margin: -30px -30px 15px -30px;
-  overflow: hidden;
+  text-align: center; /* centers inline/inline-block elements inside */
+  margin-bottom: 20px;
 }
+
+.blog-posts .post-img img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block; /* ensure image respects text-align center */
+  border-radius: 8px; /* optional, rounded corners */
+}
+
+/* Existing styles */
 
 .blog-posts .post-category {
   font-size: 16px;
@@ -1885,8 +2013,10 @@ section,
 
 .blog-posts .post-author-img {
   width: 50px;
+  height: 50px; /* keep square */
   border-radius: 50%;
   margin-right: 15px;
+  object-fit: cover; /* cover to maintain aspect ratio */
 }
 
 .blog-posts .post-author {
