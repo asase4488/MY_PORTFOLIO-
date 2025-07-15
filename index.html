@@ -802,7 +802,6 @@
   <section id="services" class="services section bg-white text-dark py-5">
   <style>
     .section-title h3 {
-      display: inline-block;
       padding-bottom: 5px;
       margin-bottom: 20px;
     }
@@ -862,8 +861,7 @@
 
   <!-- Services Grid -->
   <div class="container">
-    <div class="row gy-4">
-
+    <div class="row">
       <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="service-item">
           <i class="fas fa-pencil-ruler text-warning"></i>
@@ -1073,7 +1071,9 @@
           left: 21px;
         }
       }
-    </style><section id="certificates" class="certificates section py-5 bg-light">
+    
+
+ <section id="certificates" class="certificates section py-5 bg-light">
   <style>
     .certificates .section-title h3 {
       position: relative;
@@ -1082,6 +1082,7 @@
       margin-bottom: 30px;
       font-weight: 700;
     }
+
     .certificates .section-title h3::after {
       content: "";
       display: block;
@@ -1091,109 +1092,125 @@
       margin: 10px auto 0;
       border-radius: 2px;
     }
+
     .certificate-card {
       background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 20px;
       display: flex;
       flex-direction: column;
-      height: 100%;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
     }
+
     .certificate-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 20px 30px rgba(255, 102, 0, 0.3);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 30px rgba(255, 102, 0, 0.25);
     }
+
+    .certificate-card img {
+      border-radius: 10px;
+      margin-bottom: 15px;
+      height: 200px;
+      object-fit: cover;
+      width: 100%;
+    }
+
     .certificate-title {
       font-size: 1.25rem;
       font-weight: 700;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
       color: #333;
     }
+
     .certificate-issuer {
       font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 15px;
+      color: #777;
       font-style: italic;
+      margin-bottom: 10px;
     }
-    .btn-view {
-      align-self: flex-start;
-      padding: 8px 20px;
-      border-radius: 30px;
-      border: 2px solid #ff6600;
-      background-color: transparent;
-      color: #ff6600;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-    .btn-view:hover {
-      background-color: #ff6600;
+
+    .badge-level {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #ff6600;
       color: white;
-      box-shadow: 0 6px 12px rgba(255, 102, 0, 0.6);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
     }
   </style>
 
   <div class="container section-title text-center" data-aos="fade-up">
     <h3>My Certificates</h3>
-    <p class="text-muted">Professional certifications and achievements</p>
+    <p class="text-muted">Achievements and professional skill development</p>
   </div>
 
   <div class="container">
     <div class="row gy-4">
 
-      <!-- HTML Certificate -->
-      <div class="col-xl-4 col-md-6" data-aos="fade-up">
+      <!-- HTML -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up">
         <article class="certificate-card">
+          <span class="badge-level">Beginner</span>
+          <img src="assets\Screenshot 2025-07-15 100535.png" alt="HTML Certificate">
           <h4 class="certificate-title">HTML</h4>
           <p class="certificate-issuer">Issued by A2Z IT HUB, 2024</p>
-          <a href="file:///C:/Users/akshay/Downloads/Akshay%20%20Shesherav%20Sase-HTML%20Certificate.pdf" class="btn-view">View Certificate</a>
         </article>
       </div>
 
-      <!-- CSS Certificate -->
-      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+      <!-- CSS -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <article class="certificate-card">
+          <span class="badge-level">Beginner</span>
+          <img src="assets\Screenshot 2025-07-15 100500.png" alt="CSS Certificate">
           <h4 class="certificate-title">CSS</h4>
           <p class="certificate-issuer">Issued by A2Z IT HUB, 2024</p>
-          <a href="file:///C:/Users/akshay/Downloads/Akshay%20%20Shesherav%20Sase-CSS%20Certificate.pdf" class="btn-view">View Certificate</a>
         </article>
       </div>
 
-      <!-- Bootstrap Certificate -->
-      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+      <!-- Bootstrap -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
         <article class="certificate-card">
+          <span class="badge-level">Intermediate</span>
+          <img src="assets\Screenshot 2025-07-15 100417.png" alt="Bootstrap Certificate">
           <h4 class="certificate-title">Bootstrap</h4>
           <p class="certificate-issuer">Issued by A2Z IT HUB, 2024</p>
-          <a href="assets\img\Akshay  Shesherav Sase-BOOSTSTRAP Certificate.pdf" class="btn-view">View Certificate</a>
         </article>
       </div>
 
-      <!-- JavaScript Certificate -->
-      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+      <!-- JavaScript -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
         <article class="certificate-card">
+          <span class="badge-level">Intermediate</span>
+          <img src="assets\Screenshot 2025-07-15 100331.png" alt="JavaScript Certificate">
           <h4 class="certificate-title">JavaScript</h4>
           <p class="certificate-issuer">Issued by A2Z IT HUB, 2024</p>
-          <a href="file:///C:/Users/akshay/Downloads/Akshay%20%20Shesherav%20Sase-JAVASCRIPT%20Certificate.pdf" class="btn-view">View Certificate</a>
         </article>
       </div>
 
-      <!-- PHP Certificate -->
-      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+      <!-- PHP -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
         <article class="certificate-card">
+          <span class="badge-level">Intermediate</span>
+          <img src="assets\Screenshot 2025-07-15 100248.png" alt="PHP Certificate">
           <h4 class="certificate-title">PHP</h4>
           <p class="certificate-issuer">Issued by A2Z IT HUB, 2024</p>
-          <a href="file:///C:/Users/akshay/Downloads/Akshay%20%20Shesherav%20Sase-PHP%20Certificate.pdf" class="btn-view">View Certificate</a>
         </article>
       </div>
 
-      <!-- Full Stack with PHP Certificate -->
-      <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+      <!-- Full Stack -->
+      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
         <article class="certificate-card">
+          <span class="badge-level">Advanced</span>
+          <img src="assets\Screenshot 2025-07-15 095857.png" alt="Full Stack Certificate">
           <h4 class="certificate-title">Full Stack with PHP</h4>
           <p class="certificate-issuer">Issued by A2Z IT HUB, 2024</p>
-          <a href="file:///C:/Users/akshay/Downloads/Akshay%20%20Shesherav%20Sase-Full%20Stack%20Development%20with%20PHP%20&%20Frameworks%20Certificate.pdf" class="btn-view">View Certificate</a>
         </article>
       </div>
 
@@ -1219,23 +1236,22 @@
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <article class="post-card shadow-sm rounded bg-white p-3 h-100 d-flex flex-column">
               <div class="post-img rounded overflow-hidden mb-3">
-                <img src="assets\img\IMG-20250528-WA0052.jpg" alt="Politics" class="img-fluid w-100">
+                <img src="assets\img\IMG-20250528-WA0052.jpg" alt="Internship Certificate" class="img-fluid w-100">
               </div>
 
-              <p class="post-category text-orange fw-semibold mb-2">Politics</p>
+              <p class="post-category text-orange fw-semibold mb-2">Internship Certificate</p>
 
               <h3 class="title mb-3">
-                <a href="" class="text-dark text-decoration-none">Dolorum optio tempore voluptas
-                  dignissimos</a>
+                <a href="" class="text-dark text-decoration-none">Certificate awarded for my dedication and learning during the internship.</a>
               </h3>
 
               <div class="d-flex align-items-center mt-auto">
-                <img src="assets\img\WhatsApp Image 2025-06-24 at 10.46.20_0dd302be.jpg" alt="Maria Doe"
+                <img src="assets\img\WhatsApp Image 2025-06-24 at 10.46.20_0dd302be.jpg" alt="A2z IT HUB"
                   class="img-fluid post-author-img flex-shrink-0 rounded-circle" style="width:40px; height:40px;">
                 <div class="post-meta ms-3">
-                  <p class="post-author mb-0 fw-semibold">Maria Doe</p>
+                  <p class="post-author mb-0 fw-semibold">A2z IT HUB</p>
                   <p class="post-date mb-0 text-muted" style="font-size:0.9rem;">
-                    <time datetime="2022-01-01">Jan 1, 2022</time>
+                    <time datetime="2022-01-01">Jun 22, 2025</time>
                   </p>
                 </div>
               </div>
@@ -1246,23 +1262,22 @@
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
             <article class="post-card shadow-sm rounded bg-white p-3 h-100 d-flex flex-column">
               <div class="post-img rounded overflow-hidden mb-3">
-                <img src="assets\img\IMG-20250522-WA0051.jpg" alt="Sports" class="img-fluid w-100">
+                <img src="assets\img\IMG-20250522-WA0051.jpg" alt="My Internship Project" class="img-fluid w-100">
               </div>
 
-              <p class="post-category text-orange fw-semibold mb-2">Sports</p>
+              <p class="post-category text-orange fw-semibold mb-2">My Internship Project</p>
 
               <h3 class="title mb-3">
-                <a href="blog-details.html" class="text-dark text-decoration-none">Nisi magni odit consequatur autem
-                  nulla dolorem</a>
+                <a href="blog-details.html" class="text-dark text-decoration-none">Project data visualization screen</a>
               </h3>
 
               <div class="d-flex align-items-center mt-auto">
-                <img src="assets\img\WhatsApp Image 2025-06-24 at 10.46.20_0dd302be.jpg" alt="Allisa Mayer"
+                <img src="assets\img\WhatsApp Image 2025-06-24 at 10.46.20_0dd302be.jpg" alt="A2z IT HUB"
                   class="img-fluid post-author-img flex-shrink-0 rounded-circle" style="width:40px; height:40px;">
                 <div class="post-meta ms-3">
-                  <p class="post-author mb-0 fw-semibold">Allisa Mayer</p>
+                  <p class="post-author mb-0 fw-semibold">A2z IT HUB</p>
                   <p class="post-date mb-0 text-muted" style="font-size:0.9rem;">
-                    <time datetime="2022-06-05">Jun 5, 2022</time>
+                    <time datetime="2022-06-05">Jun 15, 2025</time>
                   </p>
                 </div>
               </div>
@@ -1273,23 +1288,22 @@
           <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
             <article class="post-card shadow-sm rounded bg-white p-3 h-100 d-flex flex-column">
               <div class="post-img rounded d-flex align-items-center mt-auto">
-                <img src="assets\img\WhatsApp Image 2025-06-24 at 10.42.45_d5bac54d.jpg" alt="Entertainment" class="img-fluid w-100 d-flex align-items-center mt-auto">
+                <img src="assets\img\WhatsApp Image 2025-06-24 at 10.42.45_d5bac54d.jpg" alt="Meet the Internship Team" class="img-fluid w-100 d-flex align-items-center mt-auto">
               </div>
 
-              <p class="post-category text-orange fw-semibold mb-2">Entertainment</p>
+              <p class="post-category text-orange fw-semibold mb-2">Meet the Internship Team</p>
 
               <h3 class="title mb-3">
-                <a href="blog-details.html" class="text-dark text-decoration-none">Possimus soluta ut id suscipit ea ut
-                  in quo quia et soluta</a>
+                <a href="blog-details.html" class="text-dark text-decoration-none">United interns driving innovation, learning, and growth through collaboration.</a>
               </h3>
 
               <div class="d-flex align-items-center mt-auto">
-                <img src="assets\img\WhatsApp Image 2025-06-24 at 10.46.20_0dd302be.jpg" alt="Mark Dower"
+                <img src="assets\img\WhatsApp Image 2025-06-24 at 10.46.20_0dd302be.jpg" alt="A2z IT HUB"
                   class="img-fluid post-author-img flex-shrink-0 rounded-circle" style="width:40px; height:40px;">
                 <div class="post-meta ms-3">
-                  <p class="post-author mb-0 fw-semibold">Mark Dower</p>
+                  <p class="post-author mb-0 fw-semibold">A2z IT HUB</p>
                   <p class="post-date mb-0 text-muted" style="font-size:0.9rem;">
-                    <time datetime="2022-06-22">Jun 22, 2022</time>
+                    <time datetime="2022-06-22">Jun 22, 2025</time>
                   </p>
                 </div>
               </div>
